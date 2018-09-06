@@ -1,0 +1,195 @@
+<!-- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sport Loja :: Tú página de información</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/darklybootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- <script src="js/SmoothScroll.min.js"></script> -->
+<script src="js/jarallax.js"></script>
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner bg-about">
+		<div class="header-top about-header-top">
+			<div class="container banner-drop">
+				<div class="agile-logo">
+					<h1><a href="index.html">SportLoja<span>  </span></a></h1>
+				</div>
+				<div class="header-right">
+							<nav>
+							  <ul>
+								<li class="active">
+									<a href="index.html"><span>Inicio</span></a>
+								</li>
+								<li>
+									<a href="about.html"><span>Información</span></a>
+								</li>
+								<li>
+									<a href="paginafutbol.html"><span>Fútbol</span></a>
+								</li>
+								<li>
+									<a href="paginabasket.html"><span>Basket</span></a>
+								</li>
+								<li>
+									<a href="paginaparques.html"><span>Zonas Verdes</span></a>
+								</li>
+								<li>
+									<a href="mail.html"><span>Contacto</span></a>
+								</li>
+							  </ul>
+							</nav>
+							<div class="menu-icon"><span></span></div>
+				</div>
+				<div class="clearfix"> </div>
+					<script>
+					(function($){
+					  $(".menu-icon").on("click", function(){
+							$(this).toggleClass("open");
+							$(".container").toggleClass("nav-open");
+							$("nav ul li").toggleClass("animate");
+					  });
+					  
+					})(jQuery);
+					</script>
+			</div>
+		</div>
+		<br>
+
+
+		<div class="bg-secondary">
+			<h2>Nuestros Datos</h2> 
+			<div class="progress">
+			  <div class="progress-bar progress-bar-striped progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+			</div>
+		</div>
+
+		 <!-- tabla myslq -->
+		 <div class="container">
+		      <div class="row mt-5">
+			       	<table class="table table-dark ">
+			            <thead> <!--  cabecera -->
+			              <!--fila  -->
+			              <tr class="table-success">
+			                <!-- atributos o cabeceras -->
+			                <th>idFutbol</th>
+			                <th>Complejo</th>
+			                <th>Nombre de la Cancha</th>
+			                <th>Sector</th>
+			                <th>Direccion Pric</th>
+			                <th>Direccion Sec</th>
+			                <th>Horario</th>
+			                <th>Telefonos</th>
+			              </tr>
+			            </thead>
+			            <!-- subcuerpo -->
+			            <tbody>
+			               <% if(data){ %>
+			                 <% for(var i = 0;i < data.length;i++) { %>
+			                   <tr>
+			                     <td><%= data[i].idFutbol %></td>
+			                     <td><%= data[i].Complejo %></td>
+			                     <td><%= data[i].Nombre_Cancha %></td>
+			                     <td><%= data[i].Sector %></td>
+			                     <td><%= data[i].Direc_Principal %></td>
+			                     <td><%= data[i].Direc_Seccundaria %></td>
+			                     <td><%= data[i].Horario %></td>
+			                     <td><%= data[i].Telefonos %></td>
+			                     </td> 
+			                   </tr>
+			                   <% } %>
+			              <% } %>
+			            </tbody>
+			       	</table>
+		        </div>
+
+	            <!-- <div class="card">
+	              <div class="card-header">Registrar </div>
+	                <div class="card-body">
+	                  <form class="" action="/Insertar" method="POST">
+	                    <div class="form-group">
+	                      <label for="">IdFutbol</label>
+	                      <input type="number" name="idFutbol" value="" class="form-control">
+	                      <label for="">Complejo</label>
+	                      <input type="text" name="Complejo" value="" class="form-control">
+	                      <label for="">Nombre de la Cancha</label>
+	                      <input type="text" name="Nombre_Cancha" value="" class="form-control">
+	                      <label for="">Sector</label>
+	                      <input type="text" name="Sector" value="" class="form-control">
+	                      <label for="">Direccion P.</label>
+	                      <input type="text" name="Direc_Principal" value="" class="form-control">
+	                      <label for="">Direccion Sec.</label>
+	                      <input type="text" name="Direc_Secundaria" value="" class="form-control">
+	                      <label for="">Horario</label>
+	                      <input type="text" name="Horario" value="" class="form-control">
+	                      <label for="">Telefonos</label>
+	                      <input type="text" name="Telefonos" value="" class="form-control">
+	                    </div>
+	                    <div class="">
+	                      <input type="submit"  value="Insertar" class="btn btn-primary btn-block">
+	                    </div>
+	                  </form>
+	                </div>
+	        	</div> -->
+		    </div>
+		 <!-- //tabla myslq -->
+
+		<!-- //about-top -->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="agile-footer-grids">
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Sobre nosotros</h3>
+					<p>Somos un grupo dedicado al deporte de nuestra ciudad y queremos brindar un mayor
+						acceso a los habitantes, para que tengan una excusa menos.</p>
+				</div>
+
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Apartados</h3>
+					<ul>
+						<li class="text"><a href="index.html">Inicio</a></li>
+						<li class="text"><a href="about.html">Información</a></li>
+						<li class="text"><a href="short-codes.html">Deportes</a></li>
+						<li class="text"><a href="gallery.html">Galeria</a></li>
+						<li class="text"><a href="training.html">Zonas</a></li>
+						<li class="text"><a href="mail.html">Contacto</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 w3-agile-footer-grid">
+					<h3>Suscríbete</h3>
+					<form action="#" method="post">
+						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Enter your email here" required="">
+						<input type="submit" value="Subscribe">
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<p>© 2018 SportLoja . All Rights Reserved | Diseñado por: Grupo1-4ºA </p>
+		</div>
+	</div>
+	<!-- //copyright -->
+
+</body>	
+</html>
